@@ -1,0 +1,14 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test pem 1.0.2 --all-targets --all-features
+Features: test-name=rust-pem:@
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test pem 1.0.2 --all-targets 
+Features: test-name=librust-pem-dev:default
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test pem 1.0.2 --all-targets --no-default-features
+Features: test-name=librust-pem-dev:
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
